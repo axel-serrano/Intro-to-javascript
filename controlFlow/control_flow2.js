@@ -1,4 +1,6 @@
-let userRole = "admin";
+let userRole = prompt("");
+let isLoggedIn = true;
+let isAuthenticated = true;
 let accessLevel;
 
 if(userRole === "admin"){
@@ -8,17 +10,17 @@ if(userRole === "admin"){
 } else {
     accessLevel = "No access granted";
     isLoggedIn = false ; 
+    isAuthenticated = false;
 }
 
 console.log("Access level: ", accessLevel);
 
 // 
 
-let isLoggedIn = true;
 let userMessage;
 
-if (isLoggedIn) {
-    if (userRole === "admin") {
+if (isLoggedIn){
+    if (userRole === "admin"){
         userMessage = "Welcome, Admin!";
     } else {
         userMessage = "Welcome, User!";
@@ -31,7 +33,7 @@ console.log("User Message:", userMessage);
 
 //
 
-let userType = "subscriber";
+let userType = userRole;
 let userCategory;
 
 switch (userType){
@@ -50,7 +52,6 @@ switch (userType){
 
 console.log("User Category: ", userCategory);
 
-let isAuthenticated = true;
 let authenticationStatus = isAuthenticated ? "Authenticated" : "Not Authenticated";
 
 console.log("Authentication Status:", authenticationStatus);
