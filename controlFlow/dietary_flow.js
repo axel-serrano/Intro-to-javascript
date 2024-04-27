@@ -13,11 +13,12 @@ if (userRole === "employee"){
     accesslevel = "you're a non-subcriber, please subscribe for access to all benefits";
     userRole = prompt("Hello actually you don't have a subscription, \nPlease write Member or Subscriber depending on the type of member you want");
     isAuthenticated = false;
-    if (userRole == "member" || "subscriber"){
+    if (userRole === "member" || userRole === "subscriber"){
         accesslevel = `Now you are enrolled like ${userRole} enjoy with all your benefits`;
-        isAuthenticated = true;
-    } else if (userRole = ""){
+    } else {
+        isAuthenticated = false;
         alert("sorry, leave us your coment for why reason you don't want subscribe")
+        
     }
 }
 
