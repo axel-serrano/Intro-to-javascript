@@ -5,6 +5,7 @@ function increaseCount(){
     count++;
     displayCount();
     checkCountValue();
+    
 }
 
 function displayCount(){
@@ -21,4 +22,12 @@ function checkCountValue(){
         alert("Your Instagram post gained 20 followers! Keep it up!");
     }
 
+}
+
+// setting the reset button 
+
+function resetFollowers(){
+    count = 0;
+    document.getElementById('countDisplay').innerHTML = 0;
+    alert("Followers count has been reset.");
 }
